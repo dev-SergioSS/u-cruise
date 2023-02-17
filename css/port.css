@@ -1,0 +1,160 @@
+.port {
+  border: none !important;
+  margin: 0;
+}
+
+.port__title {
+  padding: 30px;
+  border: 1px solid var(--color-light-blue);
+}
+
+.port__content {
+  border: 1px solid var(--color-light-blue);
+  border-top: none;
+}
+
+.port__head {
+  padding: 30px;
+  border-bottom: 1px solid var(--color-light-blue);
+}
+
+.port__list {
+  max-width: 340px;
+}
+
+.port__list li:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.port__item {
+  display: flex;
+}
+
+.port__item span {
+  display: block;
+  margin-left: 20px;
+}
+
+.port__item strong {
+  font-weight: 400;
+}
+
+.port__text {
+  padding: 30px;
+}
+
+.port__cards {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.port__cards .card {
+  flex: 0 0 50%;
+  border: 1px solid var(--color-light-blue);
+  border-top: none;
+}
+
+.port__cards .card__head {
+  align-items: start;
+  flex-wrap: nowrap;
+}
+
+.port__cards .card__name {
+  max-width: 230px;
+  margin-left: 5px;
+  overflow-wrap: break-word;
+}
+
+.port__cards .card__rate {
+  position: static;
+  padding: 8px 0;
+}
+
+.port__cards .card__rate svg {
+  margin-right: 6px;
+}
+
+.port__cards .card__row {
+  gap: 14px;
+}
+
+.port__cards .card__price-info {
+  font-size: 18px;
+}
+
+.port__cards .card__btn {
+  width: auto;
+  flex: 0 1 200px;
+}
+
+.port__btn-more-wrap {
+  display: block;
+  padding-top: 45px;
+}
+
+.port__btn-more {
+  margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  .port__cards .card:nth-child(even) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 998px) {
+  .port__cards .card__head {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media (max-width: 768px) {
+  .port {
+    font-size: 14px;
+  }
+
+  .port__title {
+    padding: 20px;
+  }
+
+  .port__head {
+    padding: 20px;
+  }
+
+  .port__text {
+    padding: 20px;
+  }
+
+  .port__cards .card {
+    flex: 0 0 100%;
+  }
+
+  .port__cards .card__rate {
+    padding: 5px 0;
+  }
+
+  .port__cards .card__rate svg {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+  }
+
+  .port__btn-more-wrap {
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .port__cards .card__head {
+    flex-wrap: nowrap;
+  }
+
+  .port__cards .card__img {
+    height: 200px;
+  }
+
+  .port__cards .card__btn {
+    flex: 0 0 100%;
+  }
+}

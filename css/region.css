@@ -1,0 +1,118 @@
+.region__container {
+  border: 1px solid var(--color-light-blue);
+}
+
+.region__head {
+  border-bottom: 1px solid var(--color-light-blue);
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.region__title {
+  margin-bottom: 8px;
+}
+
+.region__temperature {
+  padding-left: 60px;
+  background: url("../img/icons/temperature.svg") 0 0/30px 100% no-repeat;
+}
+
+.region__temperature-row {
+  margin-bottom: 8px;
+}
+
+.region__text {
+  padding: 30px;
+}
+
+.cards-region__head-label {
+  border-right: 1px solid var(--color-light-blue);
+  padding: 0 20px;
+  max-width: 300px;
+  margin-right: 65px;
+  position: relative;
+}
+
+.cards-region__head-label::before {
+  display: none;
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  height: 100%;
+  width: calc(100% + 60px);
+  border-top: 1px solid var(--color-light-blue);
+  border-bottom: 1px solid var(--color-light-blue);
+}
+
+.cards-region .card__content {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.cards-region .card__btn {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cards-region .main-btn {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 998px) {
+  .cards-region__head-label {
+    margin-right: 0;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .region__head {
+    padding: 20px;
+  }
+
+  .region__text {
+    padding: 20px;
+  }
+
+  .cards-region .slider-row__head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cards-region__head-label {
+    padding: 20px 0;
+    border-right: none;
+    max-width: 100%;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .cards-region__head-label::before {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .region__head {
+    padding: 0;
+  }
+
+  .region__title {
+    border-bottom: 1px solid var(--color-light-blue);
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .region__temperature {
+    padding: 20px 20px 20px 60px;
+  }
+
+  .cards-region__head-label::before {
+    left: -20px;
+    width: calc(100% + 40px);
+  }
+}

@@ -1,0 +1,242 @@
+.cruises {
+  padding-top: 85px;
+}
+
+.cruises__head {
+  border-bottom: 1px solid var(--color-light-blue);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.cruises__head > * {
+  margin-bottom: 25px;
+}
+
+.cruises__head-btn {
+  width: 200px;
+  min-height: 45px;
+}
+
+.cruises__filter {
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.cruises__filter-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  overflow-x: auto;
+}
+
+.cruises__filter-item-icon {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-light-blue);
+  border-left: none;
+}
+
+.cruises__filter-item-icon svg {
+  width: 20px;
+}
+
+.cruises__filter-item {
+  border: 1px solid var(--color-light-blue);
+  min-width: 160px;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  position: relative;
+}
+
+.cruises__filter-item input:checked ~ .cruises__filter-item-name {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.cruises__filter-item:hover .cruises__filter-item-name {
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+}
+
+.cruises__filter-item-name {
+  transition: all 0.4s ease 0s;
+  display: block;
+  padding: 9px 15px;
+}
+
+.cruises__filter-item-desc {
+  display: none;
+}
+
+.cruises__desc {
+  max-width: 700px;
+}
+
+.cruises__list .card-cruise {
+  margin-bottom: 40px;
+}
+
+.card-cruise {
+  border: 1px solid var(--color-light-blue);
+  display: grid;
+  grid-template-areas: "image title" "image info";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 330px 1fr;
+}
+
+.card-cruise__img-wrap {
+  grid-area: image;
+  border-left: 1px solid var(--color-light-blue);
+  padding: 30px;
+}
+
+.card-cruise__img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.card-cruise__title {
+  grid-area: title;
+  padding: 13px 30px;
+  font-size: 22px;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+}
+
+.card-cruise__info {
+  grid-area: info;
+  position: relative;
+}
+
+.card-cruise__info-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-yellow);
+  padding: 8px 30px;
+  border-bottom: 1px solid var(--color-light-blue);
+}
+
+.card-cruise__info-bottom {
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.card-cruise__info-desc {
+  flex: 0 1 390px;
+  padding-left: 20px;
+}
+
+.card-cruise__info-type {
+  flex: 0 0 80px;
+  padding-left: 20px;
+}
+
+.card-cruise__info-count {
+  flex: 0 0 60px;
+  padding-left: 20px;
+}
+
+.card-cruise__info-btn {
+  margin-top: auto;
+  flex: 0 0 140px;
+}
+
+.card-cruise__button {
+  width: 100%;
+}
+
+@media (max-width: 998px) {
+  .card-cruise__info {
+    padding-bottom: 60px;
+  }
+
+  .card-cruise__info-top {
+    padding: 20px 20px 10px;
+  }
+
+  .card-cruise__info-bottom {
+    padding: 20px;
+  }
+
+  .card-cruise__info-btn {
+    flex: 0;
+  }
+
+  .card-cruise__button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    height: 40px;
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .cruises {
+    padding-top: 30px;
+  }
+
+  .cruises__head {
+    align-items: flex-start;
+  }
+
+  .cruises__filter {
+    margin-bottom: 30px;
+  }
+
+  .cruises__filter-buttons {
+    margin-bottom: 15px;
+  }
+
+  .cruises__filter-item-icon {
+    width: 30px;
+  }
+
+  .cruises__filter-item-icon svg {
+    width: 15px;
+  }
+
+  .cruises__filter-item-name {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+
+  .card-cruise {
+    grid-template-areas: "title" "image" "info";
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+  }
+
+  .card-cruise__img-wrap {
+    border-bottom: 1px solid var(--color-light-blue);
+    border-left: none;
+    padding: 20px;
+  }
+
+  .card-cruise__img {
+    height: 210px;
+  }
+
+  .card-cruise__title {
+    font-size: 18px;
+    padding: 8px 20px;
+  }
+
+  .card-cruise__info {
+    font-size: 14px;
+  }
+
+  .card-cruise__info-count {
+    padding-left: 0;
+  }
+}
